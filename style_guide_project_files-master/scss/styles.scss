@@ -6,7 +6,6 @@
 
 // NOTE: import utilities and base partials here:
 
-
-
-// import components partials
-@import 'components';
+@import 'utilities/index';
+@import 'base/index';
+@import 'components/index';
