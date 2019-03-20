@@ -1,0 +1,33 @@
+.form {
+    @include flexy( $dir: column);  
+    .headline--secondary {
+        margin-bottom: 30px;
+        
+    }
+
+    &__label--hidden {
+        display: none;
+    }
+
+    &__input,
+    .btn--default {
+        @include flexy( $dir: column);
+        height: 60px;       
+    }
+
+
+    &__input {
+        border: none;
+        margin: 20px 0;
+        border-bottom: 5px solid $color-secondary;
+    }
+
+    &__input:focus {
+        outline: none;
+    }
+
+    .btn--default {
+
+
+    }
+}

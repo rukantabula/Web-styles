@@ -1,7 +1,20 @@
 .img {
  &--logo {
-    @include center;
-    display: block;
-    padding: 20px;
+
+    @include center($pad: 20px, $disp: block);
  }
+ &--avatar {
+
+   @include center($w: 60%, $pad: 20px, $disp: block) {
+      margin-bottom: 40px;
+   };
 }
+
+&--frame {
+   @include center($w: 95%, $pad: 10px, $disp: block) {
+      margin-bottom: 40px;
+      border: 1px solid lighten($color-primary,35%);
+   };
+}
+}
+

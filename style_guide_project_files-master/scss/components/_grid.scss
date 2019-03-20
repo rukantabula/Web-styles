@@ -35,6 +35,40 @@
       &--#{$i} {
         @include flexy($wrap: wrap, $dir: column);
         @include center(90%);
+        @include font-styles($color-primary);
+
+        .card {
+          .headline {
+            &--primary {
+              @include font-styles($color-secondary){
+                margin-left: 20px;
+              };
+            }
+            &--secondary {
+             font-weight: 100;
+            }
+
+          }
+
+          p {
+            a {
+              @include font-styles($color-secondary) {
+                font-weight: bold;
+              }
+            }
+          }
+
+          .blockquote { 
+            @include center(90%); 
+            padding: 15px 0 15px 30px;
+            margin-top: 40px; 
+            margin-bottom: 40px;      
+            font-size: 20px;
+            font-style: italic; 
+            border-left: 5px solid $color-secondary;
+            border-radius: 5px;           
+          }
+        }
         // base styles applied to all grid columns 
         // NOTE: could be converted to a placeholder, along with margin
         // from the  media query
