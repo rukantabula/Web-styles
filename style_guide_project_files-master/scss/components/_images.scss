@@ -1,0 +1,7 @@
+.img {
+ &--logo {
+    @include center;
+    display: block;
+    padding: 20px;
+ }
+}

@@ -1,0 +1,14 @@
+.nav__item{
+    margin-top: $vertical-spacing;
+    @include flexy($wrap: wrap, $dir: column);   
+    a {
+      @include font-styles {
+        text-align: center;
+        @include btn-style($txt-color: $color-primary);
+        @include flexy($dir: column);
+        &:hover {
+          @include btn-style($txt-color: $white, $bg-color: $color-secondary);
+        }
+      }
+    }
+}

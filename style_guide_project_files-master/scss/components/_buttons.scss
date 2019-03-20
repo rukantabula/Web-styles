@@ -1,0 +1,5 @@
+.btn {
+    @include btn-theme{
+        @include flexy($dir: column);
+    };
+}

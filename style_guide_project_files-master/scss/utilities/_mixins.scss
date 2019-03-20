@@ -1,0 +1,72 @@
+// font styles
+@mixin font-styles {
+  color: $color-primary;
+  text-decoration: none;
+  font-family: $font-stack-primary;
+  @content;
+} 
+
+// button syles
+@mixin btn-style($txt-color: null, $bg-color:null, $txt-tr: null, $top-margin: null) {
+  padding: 10px 20px;
+  border-radius: $btn-brdr-radius;
+  background-color: $bg-color;
+  color: $txt-color;
+  text-transform: $txt-tr;
+  font-family: $font-stack-primary;
+  margin-top: $top-margin;
+}
+
+@mixin btn-theme {
+  @each $theme, $color in $themes {
+    &--#{$theme} {
+      @include btn-style($txt-color: $white, $bg-color: $color, $txt-tr: uppercase, $top-margin: 15px);
+    }
+    &--#{$theme}:hover {
+      @include btn-style($txt-color: $white, $bg-color: lighten($color,10%), $txt-tr: uppercase);
+    }
+    @content;
+  } 
+}
+
+
+// Center containers
+@mixin center($w: null) {
+  width: $w;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+@content;
+}
+
+// Create a flex container
+@mixin flexy(
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+}
+
+// Media queries
+@mixin mq($break) {  
+    $value: map-get($breakpoints, $break);
+    $sm: map-get($breakpoints, 'sm');            
+    
+    @if $value == null {
+      @error "'#{$break}' is not a valid breakpoint name.";
+    }
+    @else if $value < $sm {
+      @media (max-width: $value) {
+        @content;       
+      }          
+    }    
+    @else {
+      @media (min-width: $value) {
+        @content;       
+      }             
+    }  
+  }

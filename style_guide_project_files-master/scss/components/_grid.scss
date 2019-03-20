@@ -31,8 +31,10 @@
 
       // concatenate CSS selector, ie when $i = 1,
       // selector would be .grid__col--1
+      
       &--#{$i} {
-
+        @include flexy($wrap: wrap, $dir: column);
+        @include center(90%);
         // base styles applied to all grid columns 
         // NOTE: could be converted to a placeholder, along with margin
         // from the  media query
