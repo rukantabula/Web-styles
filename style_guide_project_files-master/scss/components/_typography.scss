@@ -1,0 +1,29 @@
+// main container class
+.container {
+    @include center(90%);
+    .headline {
+      &--secondary {
+        @include font-styles($fw:100);
+      }
+    }
+  }
+
+.card {
+    .headline {
+      &--primary {
+        @include font-styles($color-secondary, $size: 30px) {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    p {
+      a {
+        @include font-styles($color: $color-secondary, $fw: bold);
+        }           
+    }
+
+    .blockquote {
+      @include blockquote;
+    }
+  }

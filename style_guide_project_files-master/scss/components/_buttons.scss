@@ -1,5 +1,6 @@
-.btn {
+.btn{
     @include btn-theme{
         @include flexy($dir: row);
     };
 }
+
