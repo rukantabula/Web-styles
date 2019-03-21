@@ -335,24 +335,10 @@ p {
     color: #fff;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
-  .grid__row .theme__colors.grid__col--3:hover {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #deb2ee;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    margin-top: 15px; }
   .grid__row .theme__colors.grid__col--4 {
     padding: 10px 20px;
     border-radius: 5px;
     background-color: #1ad3fb;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    margin-top: 15px; }
-  .grid__row .theme__colors.grid__col--4:hover {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #7ee6fd;
     color: #fff;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
@@ -363,24 +349,10 @@ p {
     color: #fff;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
-  .grid__row .theme__colors.grid__col--5:hover {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #88d9a0;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    margin-top: 15px; }
   .grid__row .theme__colors.grid__col--6 {
     padding: 10px 20px;
     border-radius: 5px;
     background-color: #236b80;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    margin-top: 15px; }
-  .grid__row .theme__colors.grid__col--6:hover {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #3fabca;
     color: #fff;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
@@ -391,13 +363,6 @@ p {
     color: #fff;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
-  .grid__row .theme__colors.grid__col--7:hover {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #ec9fa3;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    margin-top: 15px; }
   .grid__row .theme__colors.grid__col--8 {
     padding: 10px 20px;
     border-radius: 5px;
@@ -405,24 +370,10 @@ p {
     color: #fff;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
-  .grid__row .theme__colors.grid__col--8:hover {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #fd9f85;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    margin-top: 15px; }
   .grid__row .theme__colors.grid__col--12 {
     padding: 10px 20px;
     border-radius: 5px;
     background-color: #2ad8b2;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    margin-top: 15px; }
-  .grid__row .theme__colors.grid__col--12:hover {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #80e8d1;
     color: #fff;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }

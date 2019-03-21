@@ -1,14 +1,19 @@
 // font styles
-@mixin font-styles($color:null, $size: null) {
+@mixin font-styles($color: null, $size: null) {
   color: $color;
   text-decoration: none;
   font-family: $font-stack-primary;
   font-size: $size;
   @content;
-} 
+}
 
 // button syles
-@mixin btn-style($txt-color: null, $bg-color:null, $txt-tr: null, $top-margin: null) {
+@mixin btn-style(
+  $txt-color: null,
+  $bg-color: null,
+  $txt-tr: null,
+  $top-margin: null
+) {
   padding: 10px 20px;
   border-radius: $btn-brdr-radius;
   background-color: $bg-color;
@@ -21,65 +26,87 @@
 @mixin btn-theme {
   @each $theme, $color in $button-themes {
     &--#{$theme} {
-      @include btn-style($txt-color: $white, $bg-color: darken($color, 10%), $txt-tr: uppercase, $top-margin: 15px);
+      @include btn-style(
+        $txt-color: $white,
+        $bg-color: darken($color, 10%),
+        $txt-tr: uppercase,
+        $top-margin: 15px
+      );
     }
     &--#{$theme}:hover {
-      @include btn-style($txt-color: $white, $bg-color: $color, $txt-tr: uppercase);
+      @include btn-style(
+        $txt-color: $white,
+        $bg-color: $color,
+        $txt-tr: uppercase
+      );
     }
     @content;
-  } 
+  }
 }
 
 @mixin grid-theme($i) {
   $color: map-get($grid-themes, $i);
-    &--#{$i} {    
-      @include btn-style($txt-color: $white, $bg-color:  darken($color, 20%), $top-margin: 15px);
-  }
-  &--#{$i}:hover {    
-    @include btn-style($txt-color: $white, $bg-color:$color, $top-margin: 15px);
-}
-}
 
+  @include error-handler(
+    $condition: (type_of($i) != "number" ),
+    $statement: "Only numbers are valid arguments for grid col"
+  );
+
+  @include error-handler(
+    $condition: ( $color == null),
+    $statement: "Please enter a valid grid column number"
+  );
+
+  $color: darken($color, 20%);
+  &--#{$i} {
+    @include btn-style(
+      $txt-color: $white,
+      $bg-color: $color,
+      $top-margin: 15px
+    );
+  }
+}
 
 // Center containers
-@mixin center($w: null,$pad: null, $disp: null) {
+@mixin center($w: null, $pad: null, $disp: null) {
   width: $w;
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
   display: $disp;
   padding: $pad;
-@content;
+  @content;
 }
 
 // Create a flex container
-@mixin flexy(
-  $disp: flex,
-  $dir: null,
-  $wrap: null,
-  $just: null) {
+@mixin flexy($disp: flex, $dir: null, $wrap: null, $just: null) {
   display: $disp;
   flex-direction: $dir;
   flex-wrap: $wrap;
   justify-content: $just;
 }
 
-// Media queries
-@mixin mq($break) {  
-    $value: map-get($breakpoints, $break);
-    $sm: map-get($breakpoints, 'sm');            
-    
-    @if $value == null {
-      @error "'#{$break}' is not a valid breakpoint name.";
-    }
-    @else if $value < $sm {
-      @media (max-width: $value) {
-        @content;       
-      }          
-    }    
-    @else {
-      @media (min-width: $value) {
-        @content;       
-      }             
-    }  
+// Error Handler
+@mixin error-handler($condition, $statement) {
+  @if $condition {
+    @error $statement;
   }
+}
+
+// Media queries
+@mixin mq($break) {
+  $value: map-get($breakpoints, $break);
+  $sm: map-get($breakpoints, "sm");
+
+  @if $value == null {
+    @error "'#{$break}' is not a valid breakpoint name.";
+  } @else if $value < $sm {
+    @media (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
