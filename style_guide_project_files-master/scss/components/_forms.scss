@@ -11,10 +11,9 @@
 
     &__input,
     .btn--default {
-        @include flexy( $dir: column);
-        height: 60px;       
+        height: 50px;
+          
     }
-
 
     &__input {
         border: none;
@@ -24,10 +23,5 @@
 
     &__input:focus {
         outline: none;
-    }
-
-    .btn--default {
-
-
     }
 }

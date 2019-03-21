@@ -1,8 +1,9 @@
 // font styles
-@mixin font-styles($color:null) {
+@mixin font-styles($color:null, $size: null) {
   color: $color;
   text-decoration: none;
   font-family: $font-stack-primary;
+  font-size: $size;
   @content;
 } 
 

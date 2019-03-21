@@ -6,10 +6,20 @@
 // but additional styling may be needed
 // **********************************************
 
+// main container class
+.container {
+  @include center(90%);
+  .headline {
+    &--secondary {
+      @include font-styles($color-primary) {
+        font-weight: 100;
+      }
+    }
+  }
+}
 
 // grid base class
 .grid {
-
   // .grid__row
   &__row {
     padding: 1em 10px;
@@ -24,30 +34,24 @@
 
   // .grid__col
   &__col {
-
     // create grid columns dynamically
     // loop through each column size
     @for $i from 1 through 12 {
-
       // concatenate CSS selector, ie when $i = 1,
       // selector would be .grid__col--1
-      
+
       &--#{$i} {
         @include flexy($wrap: wrap, $dir: column);
-        @include center(90%);
+
         @include font-styles($color-primary);
 
         .card {
           .headline {
             &--primary {
-              @include font-styles($color-secondary){
+              @include font-styles($color-secondary, $size: 30px) {
                 margin-left: 20px;
-              };
+              }
             }
-            &--secondary {
-             font-weight: 100;
-            }
-
           }
 
           p {
@@ -58,18 +62,18 @@
             }
           }
 
-          .blockquote { 
-            @include center(90%); 
+          .blockquote {
             padding: 15px 0 15px 30px;
-            margin-top: 40px; 
-            margin-bottom: 40px;      
+            margin-top: 40px;
+            margin-bottom: 40px;
             font-size: 20px;
-            font-style: italic; 
+            font-style: italic;
             border-left: 5px solid $color-secondary;
-            border-radius: 5px;           
+            border-radius: 5px;
           }
         }
-        // base styles applied to all grid columns 
+
+        // base styles applied to all grid columns
         // NOTE: could be converted to a placeholder, along with margin
         // from the  media query
         margin-top: 10px;
@@ -77,12 +81,11 @@
 
         // NOTE: replace with media query mixin if aiming for exceeds
         @media (min-width: 768px) {
-
           // base stlyes applied to all grid columns
           margin-top: 0;
 
           // make column width a percentage of the column number / total columns
-          flex-basis: #{$i / 12 * 100 + "%"} ;
+          flex-basis: #{$i / 12 * 100 + "%"};
         }
       }
     }
@@ -90,13 +93,11 @@
 }
 
 // targets all elements with classes that begin with grid__col
-[class^=grid__col] {
+[class^="grid__col"] {
   // grid__col + grid__col, targets two sibling columns
   & + & {
-
     // NOTE: replace with media query mixin if aiming for exceeds
     @media (min-width: 768px) {
-
       // add grid gutter
       margin-left: 10px;
     }
