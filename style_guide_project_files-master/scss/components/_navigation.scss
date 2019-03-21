@@ -1,13 +1,12 @@
 .nav__item{
-    margin-top: $vertical-spacing;
+   
     @include flexy($wrap: wrap, $dir: column);   
     a {
-      @include font-styles {
-        text-align: center;
-        @include btn-style($txt-color: $color-primary);
-        @include flexy($dir: column);
+      @include flexy($dir: column);
+      @include font-styles($txt-align: center) {
+      @include btn-style($txt-color: $color-primary);
         &:hover {
-          @include btn-style($txt-color: $white, $bg-color: $color-secondary);
+          @include btn-style( $bg-color: $color-secondary);
         }
       }
     }

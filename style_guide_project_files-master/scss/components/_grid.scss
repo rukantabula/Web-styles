@@ -11,9 +11,7 @@
   @include center(90%);
   .headline {
     &--secondary {
-      @include font-styles($color-primary) {
-        font-weight: 100;
-      }
+      @include font-styles($fw:100);
     }
   }
 }
@@ -23,8 +21,8 @@
   // .grid__row
   &__row {
     padding: 1em 10px;
-    display: flex;
-    flex-direction: column;
+    @include flexy($disp: flex, $dir: column);
+
 
     .theme__colors.grid__col {
       @for $i from 3 through 8 {
@@ -39,7 +37,7 @@
 
     // NOTE: replace with media query mixin if aiming for exceeds
     @media (min-width: 768px) {
-      flex-direction: row;
+      @include flexy($dir:  row);
     }
   }
 
@@ -53,9 +51,7 @@
 
       &--#{$i} {
         @include flexy($wrap: wrap, $dir: column);
-
-        @include font-styles($color-primary);
-
+        @include font-styles;
         .card {
           .headline {
             &--primary {
@@ -67,20 +63,12 @@
 
           p {
             a {
-              @include font-styles($color-secondary) {
-                font-weight: bold;
-              }
-            }
+              @include font-styles($color: $color-secondary, $fw: bold);
+              }           
           }
 
           .blockquote {
-            padding: 15px 0 15px 30px;
-            margin-top: 40px;
-            margin-bottom: 40px;
-            font-size: 20px;
-            font-style: italic;
-            border-left: 5px solid $color-secondary;
-            border-radius: 5px;
+            @include blockquote;
           }
         }
 
@@ -88,7 +76,7 @@
         // NOTE: could be converted to a placeholder, along with margin
         // from the  media query
         margin-top: 10px;
-        flex-basis: 100%;
+        @include flexy($flx-basis: 100%);
 
         // NOTE: replace with media query mixin if aiming for exceeds
         @media (min-width: 768px) {
@@ -96,7 +84,7 @@
           margin-top: 0;
 
           // make column width a percentage of the column number / total columns
-          flex-basis: #{$i / 12 * 100 + "%"};
+          @include flexy($flx-basis:  #{$i / 12 * 100 + "%"});
         }
       }
     }

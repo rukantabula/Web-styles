@@ -6,23 +6,17 @@
 $white: #fff;
 
 $color-primary: #808080; 
-$color-primary-light: lighten($color-primary, 10%);
 $color-secondary: #58e1c1; // dark violet red
-$color-accent: #eeea72;
-$color-shade: #eee;
-
-$color-text: #343434;
-$color-bg: #3acec2;
-$color-bg-light: #009fe1;
 
 // Fonts
 $font-stack-primary:  'Roboto', sans-serif;
 $font-stack-secondary: 'Bree Serif', serif;
+$txt-tr-upper: uppercase;
+$txt-tr-none: none;
 
 // Layout
 $max-width: 1000px;
 $gutter: 10px;
-$vertical-spacing: 20px;
 $btn-brdr-radius: 5px;
 
 // Breakpoints
