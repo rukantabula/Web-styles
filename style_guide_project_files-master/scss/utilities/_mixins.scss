@@ -19,7 +19,7 @@
 }
 
 @mixin btn-theme {
-  @each $theme, $color in $themes {
+  @each $theme, $color in $button-themes {
     &--#{$theme} {
       @include btn-style($txt-color: $white, $bg-color: $color, $txt-tr: uppercase, $top-margin: 15px);
     }
@@ -28,6 +28,13 @@
     }
     @content;
   } 
+}
+
+@mixin grid-theme($i) {
+    &--#{$i} {
+      $color: map-get($grid-themes, $i);
+      @include btn-style($txt-color: $white, $bg-color: $color, $top-margin: 15px);
+  }
 }
 
 

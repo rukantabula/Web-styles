@@ -26,6 +26,13 @@
     display: flex;
     flex-direction: column;
 
+    .theme__colors.grid__col {
+      @for $i from 3 through 8 {
+        @include grid-theme($i);
+      }
+      @include grid-theme(12);
+    }
+
     // NOTE: replace with media query mixin if aiming for exceeds
     @media (min-width: 768px) {
       flex-direction: row;
