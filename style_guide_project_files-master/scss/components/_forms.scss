@@ -1,5 +1,6 @@
 .form {
-    @include flexy( $dir: column);  
+    @include flexy( $dir: column);
+      
     .headline--secondary {
         margin-bottom: 30px;
         

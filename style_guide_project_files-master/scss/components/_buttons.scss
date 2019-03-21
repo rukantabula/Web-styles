@@ -1,6 +1,5 @@
 .btn {
     @include btn-theme{
-        
-        @include flexy($dir: column);
+        @include flexy($dir: row);
     };
 }

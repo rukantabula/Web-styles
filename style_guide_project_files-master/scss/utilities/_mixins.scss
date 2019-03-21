@@ -21,20 +21,23 @@
 @mixin btn-theme {
   @each $theme, $color in $button-themes {
     &--#{$theme} {
-      @include btn-style($txt-color: $white, $bg-color: $color, $txt-tr: uppercase, $top-margin: 15px);
+      @include btn-style($txt-color: $white, $bg-color: darken($color, 10%), $txt-tr: uppercase, $top-margin: 15px);
     }
     &--#{$theme}:hover {
-      @include btn-style($txt-color: $white, $bg-color: lighten($color,10%), $txt-tr: uppercase);
+      @include btn-style($txt-color: $white, $bg-color: $color, $txt-tr: uppercase);
     }
     @content;
   } 
 }
 
 @mixin grid-theme($i) {
-    &--#{$i} {
-      $color: map-get($grid-themes, $i);
-      @include btn-style($txt-color: $white, $bg-color: $color, $top-margin: 15px);
+  $color: map-get($grid-themes, $i);
+    &--#{$i} {    
+      @include btn-style($txt-color: $white, $bg-color:  darken($color, 20%), $top-margin: 15px);
   }
+  &--#{$i}:hover {    
+    @include btn-style($txt-color: $white, $bg-color:$color, $top-margin: 15px);
+}
 }
 
 

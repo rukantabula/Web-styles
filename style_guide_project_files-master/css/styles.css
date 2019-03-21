@@ -331,11 +331,25 @@ p {
   .grid__row .theme__colors.grid__col--3 {
     padding: 10px 20px;
     border-radius: 5px;
+    background-color: #ba5edc;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px; }
+  .grid__row .theme__colors.grid__col--3:hover {
+    padding: 10px 20px;
+    border-radius: 5px;
     background-color: #deb2ee;
     color: #fff;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
   .grid__row .theme__colors.grid__col--4 {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #1ad3fb;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px; }
+  .grid__row .theme__colors.grid__col--4:hover {
     padding: 10px 20px;
     border-radius: 5px;
     background-color: #7ee6fd;
@@ -345,11 +359,25 @@ p {
   .grid__row .theme__colors.grid__col--5 {
     padding: 10px 20px;
     border-radius: 5px;
+    background-color: #3dbe63;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px; }
+  .grid__row .theme__colors.grid__col--5:hover {
+    padding: 10px 20px;
+    border-radius: 5px;
     background-color: #88d9a0;
     color: #fff;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
   .grid__row .theme__colors.grid__col--6 {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #236b80;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px; }
+  .grid__row .theme__colors.grid__col--6:hover {
     padding: 10px 20px;
     border-radius: 5px;
     background-color: #3fabca;
@@ -359,11 +387,25 @@ p {
   .grid__row .theme__colors.grid__col--7 {
     padding: 10px 20px;
     border-radius: 5px;
+    background-color: #db4a51;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px; }
+  .grid__row .theme__colors.grid__col--7:hover {
+    padding: 10px 20px;
+    border-radius: 5px;
     background-color: #ec9fa3;
     color: #fff;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
   .grid__row .theme__colors.grid__col--8 {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #fb5021;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px; }
+  .grid__row .theme__colors.grid__col--8:hover {
     padding: 10px 20px;
     border-radius: 5px;
     background-color: #fd9f85;
@@ -373,10 +415,22 @@ p {
   .grid__row .theme__colors.grid__col--12 {
     padding: 10px 20px;
     border-radius: 5px;
+    background-color: #2ad8b2;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px; }
+  .grid__row .theme__colors.grid__col--12:hover {
+    padding: 10px 20px;
+    border-radius: 5px;
     background-color: #80e8d1;
     color: #fff;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
+  .grid__row .centered {
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto; }
   @media (min-width: 768px) {
     .grid__row {
       flex-direction: row; } }
@@ -771,19 +825,19 @@ p {
 
 .btn {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
-  flex-direction: column; }
+  flex-direction: row; }
   .btn--default {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #51ddfc;
+    background-color: #1fd3fb;
     color: #fff;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
@@ -791,14 +845,14 @@ p {
   .btn--default:hover {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #83e7fd;
+    background-color: #51ddfc;
     color: #fff;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif; }
   .btn--success {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #63cc82;
+    background-color: #3ebe64;
     color: #fff;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
@@ -806,14 +860,14 @@ p {
   .btn--success:hover {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #89d9a1;
+    background-color: #63cc82;
     color: #fff;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif; }
   .btn--error {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #e4757a;
+    background-color: #dc4a51;
     color: #fff;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
@@ -821,14 +875,14 @@ p {
   .btn--error:hover {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #eca0a3;
+    background-color: #e4757a;
     color: #fff;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif; }
   .btn--warning {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #fd7856;
+    background-color: #fc5024;
     color: #fff;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
@@ -836,14 +890,14 @@ p {
   .btn--warning:hover {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #fea088;
+    background-color: #fd7856;
     color: #fff;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif; }
   .btn--info {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #927bc1;
+    background-color: #7558b1;
     color: #fff;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
@@ -851,7 +905,7 @@ p {
   .btn--info:hover {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #af9ed1;
+    background-color: #927bc1;
     color: #fff;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif; }
