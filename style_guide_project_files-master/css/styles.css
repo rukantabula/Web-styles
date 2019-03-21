@@ -825,14 +825,14 @@ p {
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
-  .btn--default:hover {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #51ddfc;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: "Roboto", sans-serif;
-    margin-top: 15px; }
+    .btn--default:hover {
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #51ddfc;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "Roboto", sans-serif;
+      margin-top: 15px; }
   .btn--success {
     padding: 10px 20px;
     border-radius: 5px;
@@ -841,14 +841,14 @@ p {
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
-  .btn--success:hover {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #63cc82;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: "Roboto", sans-serif;
-    margin-top: 15px; }
+    .btn--success:hover {
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #63cc82;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "Roboto", sans-serif;
+      margin-top: 15px; }
   .btn--error {
     padding: 10px 20px;
     border-radius: 5px;
@@ -857,14 +857,14 @@ p {
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
-  .btn--error:hover {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #e4757a;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: "Roboto", sans-serif;
-    margin-top: 15px; }
+    .btn--error:hover {
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #e4757a;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "Roboto", sans-serif;
+      margin-top: 15px; }
   .btn--warning {
     padding: 10px 20px;
     border-radius: 5px;
@@ -873,14 +873,14 @@ p {
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
-  .btn--warning:hover {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #fd7856;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: "Roboto", sans-serif;
-    margin-top: 15px; }
+    .btn--warning:hover {
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #fd7856;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "Roboto", sans-serif;
+      margin-top: 15px; }
   .btn--info {
     padding: 10px 20px;
     border-radius: 5px;
@@ -889,14 +889,14 @@ p {
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
     margin-top: 15px; }
-  .btn--info:hover {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #927bc1;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: "Roboto", sans-serif;
-    margin-top: 15px; }
+    .btn--info:hover {
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #927bc1;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "Roboto", sans-serif;
+      margin-top: 15px; }
 
 .form {
   display: flex;

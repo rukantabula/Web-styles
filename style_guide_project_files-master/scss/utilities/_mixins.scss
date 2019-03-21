@@ -51,9 +51,9 @@
         $bg-color: darken($color, 10%),
         $txt-tr: $txt-tr-upper
       );
-    }
-    &--#{$theme}:hover {
-      @include btn-style($bg-color: $color, $txt-tr: $txt-tr-upper);
+      &:hover {
+        @include btn-style($bg-color: $color, $txt-tr: $txt-tr-upper);
+      }
     }
     @content;
   }
