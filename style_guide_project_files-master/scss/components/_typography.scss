@@ -10,7 +10,7 @@
 
 .card {
   @include mq("sm") {
-    padding: 40px;
+    padding: 20px;
     font-size: px-to-em($value: 14);
   }
   .headline {
