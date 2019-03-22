@@ -6,7 +6,17 @@
 // but additional styling may be needed
 // **********************************************
 
-
+// main container class
+.container {
+  @extend %pri-style;
+  @include mq('xs') {
+    @include center(90%);
+  }
+  @include mq('sm') {
+    @include center(80%);
+  }
+ 
+}
 
 // grid base class
 .grid {
@@ -22,13 +32,17 @@
       @include grid-theme(12);
     }
 
-    .centered {
-      @include center(90%);
+    @include mq('sm') {
+      .centered {
+        @include center(90%);
+      }
     }
+    
 
     // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
-      @include flexy($dir:  row);
+
+    @include mq('sm') {
+      @include flexy($dir: row);
     }
   }
 
@@ -41,9 +55,16 @@
       // selector would be .grid__col--1
 
       &--#{$i} {
-        @include flexy($wrap: wrap, $dir: column);
-        @include font-styles;
-
+        
+        @include mq('xs') {
+          @include flexy($wrap: wrap, $dir: column);
+        }
+        @include mq('sm') {
+          @include flexy($wrap: wrap, $dir: row, $just: center);
+        }
+        text-decoration: none;
+        font-family: $font-stack-primary;
+  
         // base styles applied to all grid columns
         // NOTE: could be converted to a placeholder, along with margin
         // from the  media query
@@ -51,12 +72,12 @@
         @include flexy($flx-basis: 100%);
 
         // NOTE: replace with media query mixin if aiming for exceeds
-        @media (min-width: 768px) {
+       @include mq('sm')  {
           // base stlyes applied to all grid columns
           margin-top: 0;
 
           // make column width a percentage of the column number / total columns
-          @include flexy($flx-basis:  flx-column-width($i));
+          @include flexy($flx-basis: flx-column-width($i));
         }
       }
     }
@@ -68,8 +89,7 @@
   // grid__col + grid__col, targets two sibling columns
   & + & {
     // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
-      // add grid gutter
+    @include mq('sm') {
       margin-left: 10px;
     }
   }

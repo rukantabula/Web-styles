@@ -1,13 +1,29 @@
-.nav__item{
-   
-    @include flexy($wrap: wrap, $dir: column);   
-    a {
+// Navigation
+
+.nav {
+  @include mq("xs") {
+    @include flexy($wrap: wrap, $dir: column);
+  }
+  @include mq("sm") {
+    @include flexy($wrap: wrap, $dir: row, $just: center);
+    margin-bottom: 70px;
+  }
+
+  &__item {
+    @include mq("xs") {
       @include flexy($dir: column);
-      @include font-styles($txt-align: center) {
+    }
+    @include mq("sm") {
+      @include flexy($dir: row, $just: space-between);
+    }
+    a {
+      @extend %pri-style;
+      text-align: center;
+      text-decoration: none;
       @include btn-style($txt-color: $color-primary);
-        &:hover {
-          @include btn-style( $bg-color: $color-secondary);
-        }
+      &:hover {
+        @include btn-style($bg-color: $color-secondary);
       }
     }
+  }
 }

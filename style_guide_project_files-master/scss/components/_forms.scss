@@ -1,26 +1,26 @@
+// Forms
 .form {
-    @include flexy( $dir: column);  
-    .headline--secondary {
-        margin-bottom: 30px;
-    }
+  @include flexy($dir: column);
+  .headline--secondary {
+    margin-bottom: 30px;
+  }
 
-    &__label--hidden {
-        display: none;
-    }
+  &__label--hidden {
+    display: none;
+  }
 
-    &__input,
-    .btn--default {
-        height: 50px;
-          
-    }
+  &__input,
+  .btn--default {
+    height: 50px;
+  }
 
-    &__input {
-        border: none;
-        margin: 20px 0;
-        border-bottom: 5px solid $color-secondary;
-    }
+  &__input {
+    border: none;
+    margin: 20px 0;
+    border-bottom: 5px solid $color-secondary;
+  }
 
-    &__input:focus {
-        outline: none;
-    }
+  &__input:focus {
+    outline: none;
+  }
 }

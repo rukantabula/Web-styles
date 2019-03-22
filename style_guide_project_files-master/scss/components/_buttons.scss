@@ -1,6 +1,8 @@
-.btn{
-    @include btn-theme{
-        @include flexy($dir: row);
-    };
+.btn {
+  @include btn-theme {
+    @include mq("sm") {
+      margin-left: 20px;
+      padding: 30px;
+    }
+  }
 }
-

@@ -1,29 +1,38 @@
-// main container class
-.container {
-    @include center(90%);
-    .headline {
-      &--secondary {
-        @include font-styles($fw:100);
-      }
+// Typography
+.headline {
+  &--secondary {
+    font-weight: 100;
+    @include mq("sm") {
+      font-size: px-to-em($value: 15);
     }
   }
+}
 
 .card {
-    .headline {
-      &--primary {
-        @include font-styles($color-secondary, $size: 30px) {
-          margin-left: 20px;
-        }
-      }
-    }
-
-    p {
-      a {
-        @include font-styles($color: $color-secondary, $fw: bold);
-        }           
-    }
-
-    .blockquote {
-      @include blockquote;
+  @include mq("sm") {
+    padding: 40px;
+    font-size: px-to-em($value: 14);
+  }
+  .headline {
+    &--primary {
+      @extend %sec-style;
+      font-size: px-to-em($value: 30);
+      margin-left: 20px;
     }
   }
+
+  .link {
+    @extend %sec-style;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: px-to-em($value: 15);
+  }
+
+  .blockquote {
+    @include blockquote;
+    @include mq("sm") {
+      padding: 10px;
+      font-size: px-to-em($value: 20);
+    }
+  }
+}

@@ -5,12 +5,11 @@
 // Colors
 $white: #fff;
 
-$color-primary: #808080; 
-$color-secondary: #58e1c1; // dark violet red
+$color-primary: #808080;
+$color-secondary: #58e1c1;
 
 // Fonts
-$font-stack-primary:  'Roboto', sans-serif;
-$font-stack-secondary: 'Bree Serif', serif;
+$font-stack-primary: "Roboto", sans-serif;
 $txt-tr-upper: uppercase;
 $txt-tr-none: none;
 
@@ -21,32 +20,26 @@ $btn-brdr-radius: 5px;
 
 // Breakpoints
 $breakpoints: (
-  'sm': 480px, 
-  'lg': 1400px
+  "xs": 768px,
+  "sm": 769px
 );
 
 // Button Theme color
 $button-themes: (
-  'default': #51ddfc,
-  'success':#63cc82,
-  'error': #e4757a,
-  'warning': #fd7856,
-  'info': #927bc1
+  "default": #51ddfc,
+  "success": #63cc82,
+  "error": #e4757a,
+  "warning": #fd7856,
+  "info": #927bc1
 );
 
 // Button Theme color
 $grid-themes: (
-  3 : #deb2ee,
-  4 : #7ee6fd,
-  5 : #88d9a0,
-  6 : #3fabca,
-  7 : #ec9fa3,
-  8 : #fd9f85,
-  12 : #80e8d1,
+  3: #deb2ee,
+  4: #7ee6fd,
+  5: #88d9a0,
+  6: #3fabca,
+  7: #ec9fa3,
+  8: #fd9f85,
+  12: #80e8d1
 );
-
-
-
-
-
-
