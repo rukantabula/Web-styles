@@ -2,16 +2,17 @@
 //  Variables
 // ======================================
 
-// Colors
-$white: #fff;
-
-$color-primary: #808080;
-$color-secondary: #58e1c1;
-
 // Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 $font-stack-primary: "Roboto", sans-serif;
 $txt-tr-upper: uppercase;
 $txt-tr-none: none;
+
+
+// Colors
+$white: #fff;
+$color-primary: #808080;
+$color-secondary: #58e1c1;
 
 // Layout
 $max-width: 1000px;
